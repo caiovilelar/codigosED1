@@ -1,3 +1,4 @@
+package LSE;
 import java.util.Scanner;
 
 public class ListaComDescritor {

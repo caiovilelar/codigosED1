@@ -1,3 +1,4 @@
+package LSE;
 public class LSEComDescritor<T extends Comparable<T>> {
     private LSENode<T> primeiro;
     private LSENode<T> ultimo;
