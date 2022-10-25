@@ -25,21 +25,21 @@ public class LDECrescente<T extends Comparable<T>> {
             this.prim = novo;
             this.ult = novo;
             this.qtd++;
-        } else if (valor.compareTo(this.prim.getInfo()) < 0 ){ // Insere no início
+        } else if (valor.compareTo(this.prim.getInfo()) < 0 ){ // Lista com um nó. Insere no início
             novo.setProx(this.prim);
             this.prim.setAnt(novo);
             this.prim = novo;
             this.qtd++;
         } else if (valor.compareTo(this.prim.getInfo()) == 0 ){ // Verifica repetição
             System.out.println("Valor Repetido. Inserção não efetuada.");
-        } else if (valor.compareTo(this.ult.getInfo()) > 0) { // Insere no final
+        } else if (valor.compareTo(this.ult.getInfo()) > 0) { // Lista com mais de um nó. Insere no final
             this.ult.setProx(novo);
             novo.setAnt(this.ult);
             this.ult = novo;
             this.qtd++;
         } else if (valor.compareTo(this.ult.getInfo()) == 0 ){ // Verifica repetição
             System.out.println("Valor Repetido. Inserção não efetuada.");
-        } else { // Insere no meio
+        } else { // Lista com mais de um nó. Insere no meio
             aux = this.prim.getProx();
             while (true) {
                 if (valor.compareTo(aux.getInfo()) == 0) { // Verifica repetição
