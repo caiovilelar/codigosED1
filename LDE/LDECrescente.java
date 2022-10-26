@@ -131,13 +131,14 @@ public class LDECrescente<T extends Comparable<T>> {
     public void exibirTodos () { // Exibe todos os valores da lista
         LDENode<T> aux;
         if (this.isEmpty() == true) {
-            System.out.println("Lista vazia!");
+            System.out.println("Lista Vazia!");
         } else {
             aux = this.prim;
             while (aux != null) {
-                System.out.println(aux.getInfo());
+                System.out.print(aux.getInfo() + " ");
                 aux = aux.getProx();
             }
         }
+        System.out.println(" ");
     }
 }
