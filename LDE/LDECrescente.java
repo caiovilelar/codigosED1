@@ -1,8 +1,6 @@
 package LDE;
 //Lista Duplamente Encadeada Ordenada Em Ordem Crescente e Sem Repetições
 
-import java.security.cert.LDAPCertStoreParameters;
-
 public class LDECrescente<T extends Comparable<T>> {
     private LDENode<T> prim;
     private LDENode<T> ult;
