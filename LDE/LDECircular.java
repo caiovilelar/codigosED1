@@ -21,6 +21,27 @@ public class LDECircular <T extends Comparable<T>> {
             this.qtd++;
             this.prim.setAnt(this.ult);
             this.ult.setProx(this.prim);
+        } else {
+            novo.setProx(this.prim);
+            this.prim.setAnt(novo);
+            this.prim = novo;
+            this.qtd++;
+            this.prim.setAnt(this.ult);
+            this.ult.setProx(this.prim);
         }
+    }
+
+    public void exibirTodos() {
+        LDENode<T> aux;
+        if (this.isEmpty() == true) {
+            System.out.println("Lista Vazia!");
+        } else {
+            aux = this.prim;
+            do {
+                System.out.print(aux.getInfo() + " ");
+                aux = aux.getProx();
+            } while (aux != this.prim);
+        }
+        System.out.println(" ");
     }
 }
