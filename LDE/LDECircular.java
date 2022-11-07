@@ -63,21 +63,21 @@ public class LDECircular <T extends Comparable<T>> {
         System.out.println(" ");
     }
 
-    private LDENode<T> buscar (T valor) { // Busca o nó na lista
-        LDENode<T> aux;
+    public LDENode<T> buscar(T valor) { // busca simples
+        LDENode<T> aux = this.prim;
         if (this.isEmpty() == true) {
             return null;
-        } else {
-            aux = this.prim;
-            while (aux != null) {
-                if (aux.getInfo().compareTo(valor) == 0) {
-                    return aux;
-                } else {
-                    aux = aux.getProx();
-                }
-            }
-            return null;
         }
+        if (valor.compareTo(this.ult.getInfo()) == 0) {
+            return this.ult;
+        }
+        for (int i = 0; i < this.qtd; i++) {
+            if (valor.compareTo(aux.getInfo()) == 0) {
+                return aux;
+            }
+            aux = aux.getProx();
+        }
+        return null;
     }
 
     public void removerPrimeiro(T valor) {
