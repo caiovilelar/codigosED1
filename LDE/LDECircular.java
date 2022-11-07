@@ -63,6 +63,20 @@ public class LDECircular <T extends Comparable<T>> {
         System.out.println(" ");
     }
 
+    public void exibirInverso(){
+        LDENode<T> aux;
+        if (this.isEmpty() == true) {
+            System.out.println("Lista Vazia!");
+        } else {
+            aux = this.ult;
+            do {
+                System.out.print(aux.getInfo() + " ");
+                aux = aux.getAnt();
+            } while (aux != this.ult);
+        }
+        System.out.println(" ");
+    }
+
     public LDENode<T> buscar(T valor) { // busca simples
         LDENode<T> aux = this.prim;
         if (this.isEmpty() == true) {
