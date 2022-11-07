@@ -80,7 +80,7 @@ public class LDECircular <T extends Comparable<T>> {
         return null;
     }
 
-    public void removerPrimeiro(T valor) {
+    public void removerPrimeiro(T valor) { // remover o primeiro da lista
         if (this.isEmpty() == true) {
             System.out.println("Lista Vazia!");
         } else if (this.qtd == 1) {
@@ -95,7 +95,7 @@ public class LDECircular <T extends Comparable<T>> {
         }
     }
 
-    public void removerUltimo(T valor) {
+    public void removerUltimo(T valor) { // remover o último valor da lista
         if (this.isEmpty() == true) {
             System.out.println("Lista Vazia!");
         } else if (this.qtd == 1) {
